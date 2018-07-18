@@ -78,7 +78,7 @@ _наклонный_ _шрифт_ _наклонный__шрифт_
 `Комбинируя эти маркеры вы сможете правильно разметить свой текст, сделать его более понятным.
 Надеюсь, что эта статья будет вам полезна. Успехов в работе на GitHub!`
 
-#in pom.xml
+in pom.xml
 ------------------------
 ```xml
 <dependency>
@@ -91,25 +91,27 @@ _наклонный_ _шрифт_ _наклонный__шрифт_
     <artifactId>liquibase-core</artifactId>
 </dependency>
 
-			<plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>3.6.2</version>
-                <configuration>
-                    <propertyFile>src/main/resources/liquibase.properties</propertyFile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>update</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<plugin>
+    <groupId>org.liquibase</groupId>
+    <artifactId>liquibase-maven-plugin</artifactId>
+    <version>3.6.2</version>
+    <configuration>
+        <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+    </configuration>
+    <executions>
+        <execution>
+            <goals>
+                <goal>update</goal>
+            </goals>
+         </execution>
+    </executions>
+</plugin>
 ```
 
-#in resources
+in resources
+--------------------------
 `resources/liquibase.properties` 
+
 ```properties
 driver=org.postgresql.Driver
 url=jdbc:postgresql://localhost:5432/postgres
